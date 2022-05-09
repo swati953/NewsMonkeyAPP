@@ -23,7 +23,7 @@ const Savednews = () => {
 
       <div className="container">
         <div className="row">
-          {notes.map((note) => {
+          {notes.length>0 && notes.map((note) => {
             return (
               <div className="col-md-4" key={note._id}>
               <Savednewsitem
