@@ -27,7 +27,7 @@ export class News extends Component {
       page: 1,
       totalResults:0
     };
-    document.title=`NewsMonkey-${this.capitalizeTitle(this.props.category)}`;
+    document.title=`DailyHunt-${this.capitalizeTitle(this.props.category)}`;
     console.log("i am constructor from  Newscomponent");
   }
 async updateNews(){
@@ -123,53 +123,9 @@ this.setState({
 
   render() {
     return (
-      // <div className="container my-3">
-      //   <h2 className="text-center my-5">News-Monkey Top {this.capitalizeTitle(this.props.category)} Headlines</h2>
-      //   {this.state.loading && <Spinner/>}
-      //   <div className="row">
-      //     {!this.state.loading && this.state.articles.map((element) => {
-      //       return (
-      //         <div className="col-md-4" key={element.url}>
-      //           <NewsItem
-      //             title={element.title ? element.title.slice(0, 45) : ""}
-      //             description={
-      //               element.description ? element.description.slice(0, 88) : ""
-      //             }
-      //             imageUrl={
-      //               element.urlToImage
-      //                 ? element.urlToImage
-      //                 : "https://www.xda-developers.com/files/2021/06/Windows-11-option-7.jpg"
-      //             }
-      //             newsUrl={element.url}
-      //             author={element.author? element.author : "Unknown"}
-      //             date={element.publishedAt}
-      //             source={element.source.name}
-      //           />
-      //         </div>
-      //       );
-      //     })}
-      //     <div className="conatiner d-flex justify-content-between">
-      //       <button
-      //         disabled={this.state.page <= 1}
-      //         type="button"
-      //         className="btn btn-dark"
-      //         onClick={this.handlePrevClick}
-      //       >
-      //         &larr;previous
-      //       </button>
-      //       <button
-      //       disabled={this.state.page + 1 > Math.ceil(this.state.totalResults / this.props.pageSize)}
-      //         type="button"
-      //         className="btn btn-dark next"
-      //         onClick={this.handleNextClick}
-      //       >
-      //         Next&rarr;
-      //       </button>
-      //     </div>
-      //   </div>
-      // </div>
+     
       <>
-        <h2 className="text-center my-5" style={{color:"white"}}>News-Monkey Top {this.capitalizeTitle(this.props.category)} Headlines</h2>
+        <h2 className="text-center my-5" style={{color:"white"}}>Daily-Hunt Top {this.capitalizeTitle(this.props.category)} Headlines</h2>
         <InfiniteScroll
         dataLength={this.state.articles.length}
         next={this.fetchMoreData}

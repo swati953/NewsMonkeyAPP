@@ -19,7 +19,7 @@ const Savednews = () => {
   console.log(notes);
   return (
     <>
-      <h2 className="text-center my-5" style={{color:"white"}}>News-Monkey - Your Saved News</h2>
+      <h2 className="text-center my-5" style={{color:"white"}}>Daily-Hunt - Your Saved News</h2>
 
       <div className="container">
         <div className="row">
